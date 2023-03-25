@@ -1,0 +1,63 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+    <parameter name="browser" value="chrome" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.AddCustomerTest">
+                <methods>
+                    <include name="navigateToManagerPage"/>
+                    <include name="navigateToAddCustomer"/>
+                    <include name="EnterCustomerData"/>
+                </methods>
+            </class>
+            <class name="tests.CustomerListTest">
+                <methods>
+                    <include name="navigateToManagerPage"/>
+                    <include name="navigateToAddCustomer"/>
+                    <include name="EnterCustomerData"/>
+                    <include name="navigateToCustomerList"/>
+                    <include name="editAccounts"/>
+                    <include name="deleteAccountCreated"/>
+                </methods>
+            </class>
+            <class name="tests.CustomerLogin">
+                <methods>
+                    <include name="navigateToLogin"/>
+                    <include name="loginAsCustomer"/>
+                </methods>
+            </class>
+            <class name="tests.DepositTest">
+                <methods>
+                    <include name="navigateToLogin"/>
+                    <include name="loginAsCustomer"/>
+                    <include name="navigateToDeposit"/>
+                    <include name="addDepositAmount"/>
+                </methods>
+            </class>
+            <class name="tests.OpenAccountTest">
+                <methods>
+                    <include name="navigateToManagerPage"/>
+                    <include name="navigateToOpenAccount"/>
+                    <include name="OpenAccount"/>
+                </methods>
+            </class>
+            <class name="tests.TransactionTest">
+                <methods>
+                    <include name="navigateToLogin"/>
+                    <include name="loginAsCustomer"/>
+                    <include name="navigateToDeposit"/>
+                    <include name="addDepositAmount"/>
+                    <include name="navigateToTransactionsAndAssertTransactions"/>
+                </methods>
+            </class>
+            <class name="tests.WithdrawlTest">
+                <methods>
+                    <include name="navigateToLogin"/>
+                    <include name="loginAsCustomer"/>
+                    <include name="navigateToDeposit"/>
+                    <include name="addDepositAmount"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
